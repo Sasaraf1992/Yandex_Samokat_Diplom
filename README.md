@@ -10,8 +10,9 @@ JOIN "Orders" AS o
 GROUP BY  c.login;
 ```
 
-2. Проверка корректной записи статусов в базе данных:
-```pythonSELECT track,
+2. Проверка корректной записи статусов в базе данных: 
+```python 
+SELECT track,
 	CASE
 	WHEN finished =true THEN
 	2
