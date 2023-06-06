@@ -1,14 +1,17 @@
-﻿Работа с базой данных:
+Работа с базой данных:
 1. Проверка отображения созданного заказа в базе данных:
+
+```python
 SELECT c.login,
 		 COUNT(o."courierId")
 FROM "Couriers" AS c
 JOIN "Orders" AS o
 	ON o."courierId" = c.id
-GROUP BY  c.login;э
+GROUP BY  c.login;
+```
 
 2. Проверка корректной записи статусов в базе данных:
-SELECT track,
+```pythonSELECT track,
 	CASE
 	WHEN finished =true THEN
 	2
@@ -18,6 +21,6 @@ SELECT track,
 	1
 	ELSE 0
 	END AS status
-FROM "Orders"; 
+FROM "Orders";
+```
 
-Автоматизация теста к API
