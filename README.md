@@ -3,7 +3,7 @@
 
 ```python
 SELECT c.login,
-		 COUNT(o."courierId")
+       COUNT(o."courierId")
 FROM "Couriers" AS c
 JOIN "Orders" AS o
 	ON o."courierId" = c.id
